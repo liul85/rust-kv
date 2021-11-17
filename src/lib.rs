@@ -16,5 +16,10 @@
 //     fn get_all(&self, table: &str) -> Result<Vec<Kvpair>, KvError>;
 //     fn get_iter(&self, table: &str) -> Result<Box<dyn Iterator<Item = Kvpair>>, KvError>;
 // }
+mod error;
 mod pb;
+mod storage;
+
+pub use error::KvError;
 pub use pb::abi::*;
+pub use storage::*;
